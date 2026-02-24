@@ -1,6 +1,6 @@
-# sentic
+# Sentic
 
-A new Flutter project.
+A Flutter AI Mood-Based Playlist Generator App
 
 ## Getting Started
 
