@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sentic/theme/theme_ext.dart';
 
 class Moodtextfield extends StatelessWidget {
 
@@ -17,10 +18,12 @@ class Moodtextfield extends StatelessWidget {
       controller: controller,
       decoration: InputDecoration(
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10)
+          borderRadius: BorderRadius.circular(10),
         ),
+        focusColor: context.colorScheme.secondary,
         hintText: hint,
       ),
+      style: context.textTheme.bodyMedium,
     );
   }
 }
