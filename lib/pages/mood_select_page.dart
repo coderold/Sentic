@@ -44,7 +44,7 @@ class _MoodSelectPageState extends State<MoodSelectPage> {
             ),
           ),
 
-          Container(
+          SizedBox(
             height: 80,
             width: 300,
             child: Moodtextfield(
@@ -59,14 +59,13 @@ class _MoodSelectPageState extends State<MoodSelectPage> {
                 moodInput = controller.text;
               });
               Navigator.push(context, MaterialPageRoute(
-                  builder: (context) => PlaylistPage(),
+                  builder: (context) => PlaylistPage(moodInput: moodInput),
                 )
               );
             }, 
             child: Text('Search Your Music...')
           ),
 
-          Text(controller.text)
         ],
       ),
     ); 
