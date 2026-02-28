@@ -1,9 +1,13 @@
 import 'dart:convert';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
 class AiService {
   // static const _apiKey = String.fromEnvironment("apiKey");
-  static const _apiKey = "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";
+  // static const _apiKey = "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";
+
+  static final String _apiKey = dotenv.env['API_KEY'] ?? '';
+  
   static const _url = 'https://api.groq.com/openai/v1/chat/completions';
 
   static Future<String> getMoodKeyword(String moodInput) async {
@@ -16,7 +20,7 @@ class AiService {
           'Content-Type': 'application/json',
         },
         body: jsonEncode({
-          "model": "llama-3.3-70b-versatile", // This model is fast and smart
+          "model": "llama-3.3-70b-versatile",
           "messages": [
             {
               "role": "system",
