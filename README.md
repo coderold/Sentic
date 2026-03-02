@@ -1,16 +1,22 @@
-# Sentic
+# Sentic - A Mood-Based Playlist Generator
 
-A Flutter AI Mood-Based Playlist Generator App
+A simple Flutter app that generates a playlist based on the user’s mood.  
+This project is made to practice Flutter fundamentals before the semester starts.
 
-## Getting Started
+## 🎯 Purpose
+- Learn Flutter widgets and layout
+- Practice state management
+- Navigate between screens
+- Display dynamic lists
 
-This project is a starting point for a Flutter application.
+## 🛠 Tech Stack
+- Flutter
+- Dart
+- Material UI
+- Groq AI
+- Deezer API
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📱 How It Works
+1. User enters a mood  
+2. App generates a playlist  
+3. Songs are displayed in a list  
