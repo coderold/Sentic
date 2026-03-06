@@ -21,7 +21,8 @@ class Moodtextfield extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         focusColor: context.colorScheme.secondary,
-        hintText: hint,
+        label: Text(hint)
+
       ),
       style: context.textTheme.bodyMedium,
     );

@@ -34,12 +34,12 @@ class PlaylistPage extends StatelessWidget {
           Container(
             alignment: Alignment.center,
             child: FutureBuilder<String>(
-              future: AiService.getMoodKeyword(moodInput), // Give it the receipt
+              future: AiService.getMoodKeyword(moodInput),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return CircularProgressIndicator(); // Show this while waiting
+                  return CircularProgressIndicator(); 
                 }
-                // Once it's done, 'snapshot.data' is your real String!
+
                 return Text("AI decided the mood is: ${snapshot.data}");
               },
             ),

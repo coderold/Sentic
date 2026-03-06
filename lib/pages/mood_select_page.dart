@@ -39,7 +39,7 @@ class _MoodSelectPageState extends State<MoodSelectPage> {
             height: 100,
             width: 400,
             child: Text(
-              'A Flutter AI Mood-Based Playlist Generator App',
+              'A Mood-Based Playlist Generator',
               style: context.textTheme.bodyMedium,
             ),
           ),

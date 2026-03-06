@@ -3,11 +3,8 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
 class AiService {
-  // static const _apiKey = String.fromEnvironment("apiKey");
-  // static const _apiKey = "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";
 
-  static final String _apiKey = dotenv.env['API_KEY'] ?? '';
-  
+  static final String _apiKey = dotenv.env['AI_API_KEY'] ?? '';
   static const _url = 'https://api.groq.com/openai/v1/chat/completions';
 
   static Future<String> getMoodKeyword(String moodInput) async {
@@ -31,8 +28,8 @@ class AiService {
               "content": moodInput
             }
           ],
-          "temperature": 0.5, // Keeps it focused
-          "max_tokens": 10    // We only need one word
+          "temperature": 0.5,
+          "max_tokens": 10    
         }),
       );
 
@@ -42,29 +39,11 @@ class AiService {
         
         return aiWord.trim().toLowerCase();
       } else {
-        return "chill"; // Fallback
+        return "chill"; 
       }
     } catch (e) {
-      return "lofi"; // Fallback
+      return "lofi";
     }
   }
 
-
-  // static Future<String> getMoodKeyword(String moodInput) async{
-
-  //   final model = GenerativeModel(
-  //     model: 'gemini-1.5-flash', 
-  //     apiKey: _apiKey
-  //     );
-
-  //   final prompt= '''
-  //     The user says: "$moodInput". 
-  //     Based on this, provide exactly ONE keyword that represents the musical mood or genre 
-  //     suitable for a music search. Return ONLY the word.
-  //   ''';
-
-  //   final response = await model.generateContent([Content.text(prompt)]);
-  //   return response.text?.trim() ?? 'lofi'; //fallback
-    
-  // }
 }
